@@ -1,4 +1,4 @@
-/* Programa que conversão da temperatura em Graus Fahrenheit em Graus conversaoCelsius
+/* Programa que faz conversão da temperatura em Graus Fahrenheit em Graus Celsius
 Uso de funções
 Desenvolvido por Steffano Pereira */
 
