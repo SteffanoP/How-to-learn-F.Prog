@@ -29,7 +29,16 @@ int compara_professores_media(void *pa, void *pb) {
 int main(int argc, char *argv[]){
   int opcao=0;
 
-  printf("Bem Vindo ao programa de reputacao de professores,fique a vontade para falar mal \n");
+  printf("Bem Vindo ao programa de reputacao de professores,fique a vontade para falar mal!\n");
+  printf("Menu(Digite o nu'mero correspondente):\n");
+  printf("1 - Realizar um Cadastro\n");
+  printf("2 - Editar um Cadastro\n");
+  printf("3 - Excluir um Cadastro\n");
+  printf("4 - Listar todos os professores\n");
+  printf("5 - Pesquisar um professor\n");
+  printf("6 - Veja o rank dos professores\n");
+  printf("7 - Sair do Cadastro de professores\n");
+
   while (1) {
     scanf("%d",&opcao);
     switch (opcao) {
@@ -126,15 +135,17 @@ void Excluir_prof() {
 void Listar_prof() {
   int j;
   for (j = 0; j < profs_cadastrados; j++) {
-    printf("Matricula:%d\n",j);
-    fflush(stdin);
-    puts(professores[j].nome);
-    fflush(stdin);
-    printf("Reputacao: %d/5\n",professores[j].reputacao);
-    fflush(stdin);
-    printf("Pontualidade: %d/5\n",professores[j].pontualidade);
-    fflush(stdin);
-    printf("Media de pontuacao: %.1f/5\n\n",professores[j].media);
+    //if ((professores[j].nome) != "nada") {  //Créditos a Davi Monteiro pela Estratégia
+      printf("Matricula:%d\n",j);
+      fflush(stdin);
+      puts(professores[j].nome);
+      fflush(stdin);
+      printf("Reputacao: %d/5\n",professores[j].reputacao);
+      fflush(stdin);
+      printf("Pontualidade: %d/5\n",professores[j].pontualidade);
+      fflush(stdin);
+      printf("Media de pontuacao: %.1f/5\n\n",professores[j].media);
+    //}
   }
 }
 
